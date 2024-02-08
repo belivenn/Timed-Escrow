@@ -37,7 +37,7 @@ pub mod timed_escrow_program {
         ctx.accounts.deposit_to_vault()
     }
 
-    // Allow taker to accept the escrow
+    // Allow taker to receive the Vault Funds
     pub fn take(ctx: Context<Take>) -> Result<()> {        
         ctx.accounts.check_locked()?;
         ctx.accounts.empty_vault_to_taker()?;
